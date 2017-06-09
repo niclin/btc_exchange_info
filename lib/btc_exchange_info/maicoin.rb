@@ -1,16 +1,16 @@
 module BtcExchangeInfo
-  class Yunbi < BaseClient
+  class Maicoin < BaseClient
     class << self
       def btc(type)
         response = download_ticker
         return nil if response.nil?
-        response["btccny"]["ticker"]["#{type}"]
+        response["#{type}_price"]
       end
 
       private
 
       def download_ticker
-        response = RestClient.get "https://yunbi.com/api/v2/tickers"
+        response = RestClient.get "https://api.maicoin.com/v1/prices/twd"
         data = JSON.parse(response.body)
       rescue
         nil
