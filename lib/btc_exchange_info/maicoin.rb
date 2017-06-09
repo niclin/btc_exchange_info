@@ -7,10 +7,14 @@ module BtcExchangeInfo
         response["#{type}_price"]
       end
 
+      def url
+        "https://api.maicoin.com"
+      end
+
       private
 
       def download_ticker
-        response = RestClient.get "https://api.maicoin.com/v1/prices/twd"
+        response = RestClient.get "#{url}/v1/prices/twd"
         data = JSON.parse(response.body)
       rescue
         nil

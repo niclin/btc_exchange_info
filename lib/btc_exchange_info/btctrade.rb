@@ -7,10 +7,14 @@ module BtcExchangeInfo
         response["#{type}"]
       end
 
+      def url
+        "https://api.btctrade.com"
+      end
+
       private
 
       def download_ticker
-        response = RestClient.get "https://api.btctrade.com/api/ticker?coin=btc"
+        response = RestClient.get "#{url}/api/ticker?coin=btc"
         data = JSON.parse(response.body)
       rescue
         nil

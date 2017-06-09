@@ -6,7 +6,7 @@ require 'btc_exchange_info/version'
 Gem::Specification.new do |spec|
   spec.name          = "btc_exchange_info"
   spec.version       = BtcExchangeInfo::VERSION
-  spec.authors       = [" Write your name"]
+  spec.authors       = ["Nic Lin"]
   spec.email         = ["bboyceo@hotmail.com"]
 
   spec.summary       = %q{Write a short summary, because Rubygems requires one.}

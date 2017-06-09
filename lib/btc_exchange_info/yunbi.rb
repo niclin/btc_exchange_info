@@ -7,10 +7,14 @@ module BtcExchangeInfo
         response["btccny"]["ticker"]["#{type}"]
       end
 
+      def url
+        "https://yunbi.com"
+      end
+
       private
 
       def download_ticker
-        response = RestClient.get "https://yunbi.com/api/v2/tickers"
+        response = RestClient.get "#{url}/api/v2/tickers"
         data = JSON.parse(response.body)
       rescue
         nil

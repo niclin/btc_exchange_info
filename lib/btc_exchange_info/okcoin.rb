@@ -7,10 +7,14 @@ module BtcExchangeInfo
         response["ticker"]["#{type}"]
       end
 
+      def url
+        "https://www.okcoin.cn"
+      end
+
       private
 
       def download_ticker
-        response = RestClient.get "https://www.okcoin.cn/api/v1/ticker.do?symbol=btc_usd"
+        response = RestClient.get "#{url}/api/v1/ticker.do?symbol=btc_usd"
         data = JSON.parse(response.body)
       rescue
         nil
