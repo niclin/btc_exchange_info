@@ -4,7 +4,7 @@ module BtcExchangeInfo
       def btc(type)
         response = download_ticker
         return nil if response.nil?
-        response["#{type}_price"]
+        response["#{type}_price"].to_f
       end
 
       def url
