@@ -42,13 +42,13 @@ also you can get sell info now form Yunbi
 BtcExchangeInfo::Yunbi.btc("sell")
 ```
 
-You will git it float like `91073.88`
+You will get it float like `91073.88`
 
 
 Get website url of exchange
 
 ```
-BtcExchangeInfo::btctrade.url
+BtcExchangeInfo::Btctrade.url
 ```
 
 ## Development
